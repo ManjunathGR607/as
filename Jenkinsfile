@@ -6,7 +6,7 @@ node {
     stage("Docker build"){
         sh 'docker version'
         // sh 'docker rmi manjunathgr/resume:latest'
-        sh 'docker build --no-cache -t resume .'
+        sh 'docker build -t resume .'
         sh 'docker tag resume manjunathgr/as:$BUILD_NUMBER'
         // sh 'docker tag resume manjunathgr/resume:latest'
     }
